@@ -13,4 +13,15 @@ public class RaveController {
     public String index(){
         return "index.html";
     }
+
+
+    @RequestMapping("/contact")
+    public String contact(){
+        return "contact_page";
+    }
+    @RequestMapping("/contactSuccess")
+    @ResponseBody
+    public String contactSuccess(){
+        return "Thank you for contacting us.";
+    }
 }
