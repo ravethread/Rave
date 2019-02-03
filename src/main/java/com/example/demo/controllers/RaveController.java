@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -10,13 +11,16 @@ public class RaveController {
 
     @RequestMapping(value = "")
 
-    public String index(){
+    public String index(Model model){
+
+        model.addAttribute("title", "Home");
         return "index.html";
     }
 
 
     @RequestMapping("/contact")
-    public String contact(){
+    public String contact(Model model){
+        model.addAttribute("title", "Contact");
         return "contact_page";
     }
     @RequestMapping("/contactSuccess")
