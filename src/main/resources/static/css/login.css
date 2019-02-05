@@ -1,0 +1,24 @@
+
+
+
+.login {
+
+    display: inline-block;
+    padding: 32px 48px 0px 48px;
+    1px solid #EEE;
+
+
+
+}
+
+.login_content {
+    margin: auto;
+    padding-left: 90px
+        padding-right: 90px
+}
+
+.login_form {
+
+    padding-left: 90px
+    padding-right: 90px
+}

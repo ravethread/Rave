@@ -22,11 +22,20 @@ repositories {
 	mavenCentral()
 }
 
+
+// The movie api dependencies
+
+repositories {
+	jcenter()
+}
+
 dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile group: 'info.movito', name: 'themoviedbapi', version:'1.9'
+	compile("com.fasterxml.jackson.core:jackson-databind")
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
