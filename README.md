@@ -39,11 +39,14 @@ For this assignment, you'll create some initial plans for your project.
 ## Submission Instructions
 
 ### Wireframes
+#### Home
 ![home](https://user-images.githubusercontent.com/18449347/51779368-f78ed780-20d4-11e9-82f8-9cb77e960add.jpg)
+#### Login
 ![login](https://user-images.githubusercontent.com/18449347/51779371-fbbaf500-20d4-11e9-8cc4-4e22e4c0cb2b.jpg)
+#### Signup
 ![signup](https://user-images.githubusercontent.com/18449347/51779372-feb5e580-20d4-11e9-9f18-a323141b2acf.jpg)
-
-
+#### Dashboard
+![img_3336](https://user-images.githubusercontent.com/18449347/52516351-7ddc0b00-2bf7-11e9-85b3-3b18d7f61040.jpg)
 ### Project Tracker
 
 https://trello.com/b/UDzRA5bW/lc101-final-project
