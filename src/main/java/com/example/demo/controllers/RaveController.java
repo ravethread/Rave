@@ -3,12 +3,10 @@ package com.example.demo.controllers;
 import com.example.demo.MovieDetails;
 import com.example.demo.services.MovieDetailsSearchResponse;
 import org.springframework.http.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -34,6 +32,11 @@ public class RaveController {
         return "login";
     }
 
+    @GetMapping(value = "/logout-success")
+    public String GetLogoutPage(Model model){
+        return "logout";
+    }
+
     @RequestMapping("/signup")
     public String signup(Model model){
         model.addAttribute("title", "Signup");
@@ -41,11 +44,14 @@ public class RaveController {
     }
 
     @RequestMapping("/profile")
+    @PreAuthorize("hasRole('ROLE_USER')")
     public String profile(Model model){
         model.addAttribute("title", "Profile");
         return "profile";
     }
-    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+
+    @GetMapping(value = "/dashboard")
+    @PreAuthorize("hasRole('ROLE_USER')")
     public String dashboard(Model model){
 
         model.addAttribute("title", "Dashboard");
@@ -53,6 +59,7 @@ public class RaveController {
     }
 
     @RequestMapping(value = "/dashboard", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
     public String processDashboard(Model model, @RequestParam String movieName){
 
        String movie = movieName;

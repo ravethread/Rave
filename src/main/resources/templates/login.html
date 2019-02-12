@@ -13,7 +13,12 @@
 
 
             <div class="row login_form">
-                <form class="col s12" method="post">
+                <form class="col s12" th:action=@{"/login"} method="post">
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">
+                            Invalid username or password.
+                        </div>
+                    </div>
                     <div class='row'>
                         <div class='col s12'>
                         </div>
@@ -21,8 +26,8 @@
 
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='email' name='email' id='email' />
-                            <label for='email'>Enter your email</label>
+                            <input class='validate' type='text' name='username' id='username' />
+                            <label for='username'>Enter your username</label>
                         </div>
                     </div>
 
