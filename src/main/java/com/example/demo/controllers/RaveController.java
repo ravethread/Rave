@@ -73,7 +73,7 @@ public class RaveController {
         headers.set("api_key", "");
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
-        String resourceURL = "https://api.themoviedb.org/3/search/movie?api_key=92780e608130ce7a60cacc6fb63fdb84&language=en-US&query="+movie+"&page=1&include_adult=true";
+        String resourceURL = "https://api.themoviedb.org/3/search/movie?api_key=<api_key value>&language=en-US&query="+movie+"&page=1&include_adult=true";
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
